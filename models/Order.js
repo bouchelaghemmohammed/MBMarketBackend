@@ -7,7 +7,7 @@ const orderSchema = new mongoose.Schema({
     quantity: { type: Number, required: true, default: 1 }
   }],
   totalAmount: { type: Number, required: true },
-  status: { type: String, enum: ['pending', 'processing', 'shipped', 'delivered'], default: 'pending' }
+  status: { type: String, enum: ['pending', 'confirmed', 'shipped', 'delivered', 'received'], default: 'pending' }
 }, {
   timestamps: true
 });
